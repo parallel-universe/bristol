@@ -1,0 +1,278 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="container" id="content-container">
+            <div id="nav-container"></div>
+            <div id="content-inner"></div>
+
+            <div class="footer">
+                <p>♥ from Brizzle!</p>
+            </div>
+
+        </div>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+        <script type="text/template" id="navigation-tpl">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#rating">How Rating Works</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <h3 class="text-muted">Bristol Days Out</h3>
+            </div>
+        </script>
+
+        <script type="text/template" id="about-tpl">
+            <div class="jumbotron">
+              <h1>About us</h1>
+              <p>As parents in Bristol, the existing websites for planning a family day out were lacking, so I decided to build something simple and effective which would cater for people of all budgets, circumstances and family configurations.</p>
+              <p>The idea behind this app is that as a community we can keep things up to date, inform each other of the best deals and important information relating to these destinations and ultimately get out and do more things with the people we love.</p>
+            </div>
+        </script>
+
+        <script type="text/template" id="search-tpl">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+              </div>
+            </form>
+        </script>
+
+        <script type="text/template" id="rating-tpl">
+            <div class="row">
+                <h3>How we rate activities</h3>
+                <div class="family-rating col-md-4">
+                    <h4>Family Rating</h4>
+                    <ul class="list-group">
+                        <a class="list-group-item"><span class="label label-default">Unrated</span></a>
+                        <a class="list-group-item"><span class="label label-primary">Suitable for families</span></a>
+                        <a class="list-group-item"><span class="label label-success">Family Friendly (all ages)</span></a>
+                        <a class="list-group-item"><span class="label label-info">Family Friendly (3+)</span></a>
+                        <a class="list-group-item"><span class="label label-warning">Less suitable for families</span></a>
+                        <a class="list-group-item"><span class="label label-danger">Adult destination</span></a>
+                    </ul>
+                </div>
+                <div class="family-rating col-md-4">
+                    <h4>User rating</h4>
+                    <ul class="list-group">
+                        <a class="list-group-item">
+                            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i>
+                        </a>
+                        <a class="list-group-item">
+                            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i>
+                        </a>
+                        <a class="list-group-item">
+                            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i>
+                        </a>
+                        <a class="list-group-item">
+                            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star-empty'></i><i class='glyphicon glyphicon-star-empty'></i>
+                        </a>
+                        <a class="list-group-item">
+                            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star-empty'></i>
+                        </a>
+                        <a class="list-group-item">
+                            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i>
+                        </a>
+                    </ul>
+                </div>
+                <div class="family-rating col-md-4">
+                    <h4>Accessibility rating</h4>
+                    <ul class="list-group">
+                        <a class="list-group-item"><span class="label label-default">Unrated</span></a>
+                        <a class="list-group-item"><span class="label label-primary">Public transport links</span></a>
+                        <a class="list-group-item"><span class="label label-success">Good Public transport links</span></a>
+                        <a class="list-group-item"><span class="label label-info">Disabled access</span></a>
+                        <a class="list-group-item"><span class="label label-warning">Limited public transport links</span></a>
+                        <a class="list-group-item"><span class="label label-danger">No public transport links</span></a>
+                    </ul>
+                </div>
+                <div class="family-rating col-md-4">
+                    <h4>Price rating</h4>
+                    <ul class="list-group">
+                        <a class="list-group-item">
+                            <i class="glyphicon glyphicon-gbp"></i> 
+                        </a>
+                        <a class="list-group-item">
+                            <i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i> 
+                        </a>
+                        <a class="list-group-item">
+                            <i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i>  
+                        </a>
+                        <a class="list-group-item">
+                            <i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i> 
+                        </a>
+                        <a class="list-group-item">
+                            <i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i><i class="glyphicon glyphicon-gbp"></i> 
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="popular-days-tpl">
+            <div class="row">
+                <h3>Popular destinations</h3>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/atBristol.jpg" alt="...">
+                  <div class="caption">
+                    <h3>@Bristol</h3>
+                    <p>Science, learning and fun for all the family</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">See More...</a>
+                        <span class="label label-success">Family Friendly</span>
+                        <span class="label label-success">Good Public transport links</span>
+                        <span class="label label-info">Disabled access</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/mshed.jpeg" alt="...">
+                  <div class="caption">
+                    <h3>M-Shed</h3>
+                    <p>Family friendly Bristol Museum</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">See More...</a>
+                        <span class="label label-info">Family Friendly (3+)</span>
+                        <span class="label label-success">Good Public transport links</span>
+                        <span class="label label-info">Disabled access</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/jumpsoft.jpg" alt="...">
+                  <div class="caption">
+                    <h3>123 Jump</h3>
+                    <p>Soft play centre for children of all ages (and adults!)</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">See More...</a>
+                        <span class="label label-success">Family Friendly</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/giraffe.jpeg" alt="...">
+                  <div class="caption">
+                    <h3>Giraffe</h3>
+                    <p>Family friendly restaurant in the centre</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">See More...</a>
+                        <span class="label label-success">Family Friendly</span>
+                        <span class="label label-success">Good Public transport links</span>
+                        <span class="label label-info">Disabled access</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/swimming.jpeg" alt="...">
+                  <div class="caption">
+                    <h3>Swimming pools</h3>
+                    <p>Family friendly swimming pools open across bristol</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">See More...</a>
+                        <span class="label label-success">Family Friendly</span>
+                        <span class="label label-success">Good Public transport links</span>
+                        <span class="label label-info">Disabled access</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/aquarium.jpg" alt="...">
+                  <div class="caption">
+                    <h3>Bristol Aquarium</h3>
+                    <p>Sharks, fish, octopus and stuff, pretty cool stuff that lives in water</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">See More...</a>
+                        <span class="label label-success">Family Friendly</span>
+                        <span class="label label-success">Good Public transport links</span>
+                        <span class="label label-info">Disabled access</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+        </script>
+</body>
+</html>
