@@ -27,6 +27,7 @@ require.config({
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/underscore/underscore',
         stars: '../bower_components/bootstrap-rating-input/src/bootstrap-rating-input',
+        async: '../bower_components/requirejs-plugins/src/async',
         bootstrap: '../bower_components/bootstrap/dist/js/bootstrap'
     }
 });

@@ -9,7 +9,8 @@ define([
         'rating': 'rating',
         'search': 'search',
         'login': 'login',
-        'contribute': 'contribute'
+        'contribute': 'contribute',
+        'profile': 'profile'
     },
 
     initialize: function () {
@@ -33,6 +34,9 @@ define([
     },
     contribute: function () {
         App.Views.ContriInfoView.render();
+    },
+    profile: function () {
+        App.Views.ProfView.render();
     }
   });
 

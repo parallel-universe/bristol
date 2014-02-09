@@ -6,8 +6,9 @@ define([
     'views/aboutView',
     'views/searchView',
     'views/loginView',
-    'views/contributeInfoView'
-], function (Backbone, NavView, DestView, RateView, AbtView, SrchView, LogView, ContriInfoView){
+    'views/contributeInfoView',
+    'views/profileView'
+], function (Backbone, NavView, DestView, RateView, AbtView, SrchView, LogView, ContriInfoView, ProfView){
   var ApplicationView = Backbone.View.extend({
     el: '#content-container',
     template: _.template($('#navigation-tpl').html()),
@@ -19,12 +20,12 @@ define([
         App.Views.AbtView = new AbtView();
         App.Views.SrchView = new SrchView();
         App.Views.LogView = new LogView();
+        App.Views.ProfView = new ProfView();
         App.Views.ContriInfoView = new ContriInfoView();
         App.Views.NavView.render();
         App.Views.DestView.render();
     },
     render: function () {
-      // $(this.el).html(this.template());
       return this;
     }
   });
