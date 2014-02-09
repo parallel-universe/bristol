@@ -8,7 +8,8 @@ define([
         'about': 'about',
         'rating': 'rating',
         'search': 'search',
-        'login': 'login'
+        'login': 'login',
+        'contribute': 'contribute'
     },
 
     initialize: function () {
@@ -29,6 +30,9 @@ define([
     },
     login: function () {
         App.Views.LogView.render();
+    },
+    contribute: function () {
+        App.Views.ContriInfoView.render();
     }
   });
 
