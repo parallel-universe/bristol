@@ -7,7 +7,8 @@ define([
         'home': 'home',
         'about': 'about',
         'rating': 'rating',
-        'search': 'search'
+        'search': 'search',
+        'login': 'login'
     },
 
     initialize: function () {
@@ -25,6 +26,9 @@ define([
     },
     search: function () {
         App.Views.SrchView.render();
+    },
+    login: function () {
+        App.Views.LogView.render();
     }
   });
 

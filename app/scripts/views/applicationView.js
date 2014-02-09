@@ -4,8 +4,9 @@ define([
     'views/destinationView',
     'views/ratingView',
     'views/aboutView',
-    'views/searchView'
-], function (Backbone, NavView, DestView, RateView, AbtView, SrchView){
+    'views/searchView',
+    'views/loginView'
+], function (Backbone, NavView, DestView, RateView, AbtView, SrchView, LogView){
   var ApplicationView = Backbone.View.extend({
     el: '#content-container',
     template: _.template($('#navigation-tpl').html()),
@@ -16,6 +17,7 @@ define([
         App.Views.RateView = new RateView();
         App.Views.AbtView = new AbtView();
         App.Views.SrchView = new SrchView();
+        App.Views.LogView = new LogView();
         App.Views.NavView.render();
         App.Views.DestView.render();
     },
