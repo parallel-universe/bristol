@@ -10,8 +10,8 @@ define(['backbone'], function(Backbone){
       return this;
     },
     handleNav: function (e) {
-      $('.nav li.active').removeClass('active');
-      $(e.target).parent().addClass('active');
+      // $('.nav li.active').removeClass('active');
+      // $(e.target).parent().addClass('active');
     }
   });
   window.App.Views.NavigationView = NavigationView;
