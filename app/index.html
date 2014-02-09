@@ -69,11 +69,11 @@
                       <ul class="dropdown-menu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#rating">How our Ratings Work</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">How to Contribute</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Contact Me</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="#about">About Us</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -98,9 +98,31 @@
 
         <script type="text/template" id="about-tpl">
             <div class="jumbotron">
-              <h1>About us</h1>
+              <h1>About us</h1>  
               <p>As parents in Bristol, the existing websites for planning a family day out were lacking, so I decided to build something simple and effective which would cater for people of all budgets, circumstances and family configurations.</p>
+              <h2>About This</h2>
               <p>The idea behind this app is that as a community we can keep things up to date, inform each other of the best deals and important information relating to these destinations and ultimately get out and do more things with the people we love.</p>
+              <h3>About Me</h3>
+              <p>I am a Bristol based software developer and avid web addict, always on the lookout for something new to build or read, feel free to contact me if the mood takes you.</p>
+            </div>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Small modal</button>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
             </div>
         </script>
 
@@ -243,12 +265,18 @@
                 <div class="family-rating col-md-4">
                     <h4>Family Rating</h4>
                     <ul class="list-group">
-                        <a class="list-group-item"><span class="label label-default">Unrated</span></a>
-                        <a class="list-group-item"><span class="label label-primary">Suitable for families</span></a>
-                        <a class="list-group-item"><span class="label label-success">Family Friendly (all ages)</span></a>
-                        <a class="list-group-item"><span class="label label-info">Family Friendly (3+)</span></a>
-                        <a class="list-group-item"><span class="label label-warning">Less suitable for families</span></a>
-                        <a class="list-group-item"><span class="label label-danger">Adult destination</span></a>
+
+                        <a class="list-group-item" data-toggle="tooltip" data-placement="left" title="Items marked with this tag have not yet been rated, be the first!"><span class="label label-default">Unrated</span></a>
+
+                        <a class="list-group-item" data-toggle="tooltip" data-placement="left" title="This tag indicates a destination is broadly suitable for families but offers no specifics"><span class="label label-primary">Suitable for families</span></a>
+
+                        <a class="list-group-item" data-toggle="tooltip" data-placement="left" title="This tag indiciates a venue which is suitable for all the family and specifically has attractions for babies upwards."><span class="label label-success">Family Friendly (all ages)</span></a>
+
+                        <a class="list-group-item" data-toggle="tooltip" data-placement="left" title="This tag indiciates a venue which is suitable for the family but aimed primarily at ages 3+"><span class="label label-info">Family Friendly (3+)</span></a>
+
+                        <a class="list-group-item" data-toggle="tooltip" data-placement="left" title="This tag indiciates a destination which families can go to but may not be accomodating for everyone, especially younger ones"><span class="label label-warning">Less suitable for families</span></a>
+
+                        <a class="list-group-item" data-toggle="tooltip" data-placement="left" title="This tag indiciates a destination which is specifically aimed at adults and children are either not welcomed or not accomodated at all."><span class="label label-danger">Adult destination</span></a>
                     </ul>
                 </div>
                 <div class="family-rating col-md-4">

@@ -5,6 +5,7 @@ define(['backbone'], function(Backbone){
     
     render: function () {
       $(this.el).html(this.template());
+      $(this.el).find('.list-group-item').tooltip();
       return this;
     }
   });
